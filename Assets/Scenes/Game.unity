@@ -259,12 +259,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetSprite:
-  - {fileID: 2073279009, guid: 35f785dd3e56d504986f51a0dc653988, type: 3}
-  - {fileID: 1194429739, guid: 35f785dd3e56d504986f51a0dc653988, type: 3}
-  - {fileID: -1085133495, guid: 35f785dd3e56d504986f51a0dc653988, type: 3}
-  - {fileID: 1775304306, guid: 35f785dd3e56d504986f51a0dc653988, type: 3}
+  - {fileID: -1752748854, guid: 2ec891bd7b9789f478ff85c6e797152a, type: 3}
+  - {fileID: 1480906596, guid: 2ec891bd7b9789f478ff85c6e797152a, type: 3}
+  - {fileID: -1406481123, guid: 2ec891bd7b9789f478ff85c6e797152a, type: 3}
+  - {fileID: 188289273, guid: 2ec891bd7b9789f478ff85c6e797152a, type: 3}
+  - {fileID: -882590805, guid: 2ec891bd7b9789f478ff85c6e797152a, type: 3}
+  - {fileID: 1719457931, guid: 2ec891bd7b9789f478ff85c6e797152a, type: 3}
   cd: {fileID: 444275138}
-  targetPrefab: {fileID: 8468040118530129662, guid: 9074b9cb178346441885a14992409d53, type: 3}
+  targetPrefab: {fileID: 3989433436761665105, guid: 9074b9cb178346441885a14992409d53, type: 3}
   cooldown: 2
 --- !u!61 &444275138
 BoxCollider2D:

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35f785dd3e56d504986f51a0dc653988
+guid: 2ec891bd7b9789f478ff85c6e797152a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -82,6 +82,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -132,102 +145,131 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Treasure Chest
+      name: Skull
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04cb4eaf10e127c48851f932371f94f7
-      internalID: 1775304306
+      spriteID: 2e1ad88c4d512974fb3a19f0e79a3f32
+      internalID: -882590805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Iron Ingot
+      name: Iron Bar
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 398b2c5178ec18a4cb04234d5d57d90b
-      internalID: -1085133495
+      spriteID: 91030a9cd2574df4aa952cee7ef2cf1a
+      internalID: -1406481123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barrel
+      name: Diamond
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8c5f23093da7704384979c4b55100ad
-      internalID: 2073279009
+      spriteID: 997291218e602e64f8fa53be4c07cbb8
+      internalID: -1752748854
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Gold Coin
+      name: Rom Bottle
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd5810e7382d61243abea1a5826e5131
-      internalID: 1194429739
+      spriteID: 5e64423a255025e4c9493f3f634ce614
+      internalID: 188289273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold Jug
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cef82b473111c49884cc5f357fa2a8
+      internalID: 1480906596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Treasure Map
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd7bd1d8fadb36a43a05835982b9c347
+      internalID: 1719457931
       vertices: []
       indices: 
       edges: []
@@ -243,10 +285,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barrel: 2073279009
-      Gold Coin: 1194429739
-      Iron Ingot: -1085133495
-      Treasure Chest: 1775304306
+      Diamond: -1752748854
+      Gold Jug: 1480906596
+      Iron Bar: -1406481123
+      Rom Bottle: 188289273
+      Skull: -882590805
+      Treasure Map: 1719457931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
