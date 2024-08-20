@@ -53,18 +53,17 @@ public class UI : MonoBehaviour
     {
         Time.timeScale = 0; // Oyunu durdur (zaman ölçeðini sýfýrla)
         tryAgainButton.SetActive(true); // "Tekrar Dene" butonunu ekranda aktif hale getir
+        MusicManager.instance.StopMusic(); // Oyun bittiðinde müziði durdur
         IsGameOver = true; // Oyun bitmiþ olarak iþaretle
+        
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1; // Zaman ölçeðini sýfýrla, böylece oyun tekrar normal hýzda çalýþýr
         SceneManager.LoadScene(0); // Sahneyi yeniden yükleyerek oyunu baþtan baþlat
-        scoreValue = 0; // Skoru sýfýrla
-        scoreText.text = scoreValue.ToString("#,#"); // Skoru sýfýr olarak göster
+        MusicManager.instance.RestartMusic(); // Oyun yeniden baþlatýldýðýnda müziði tekrar baþlat
         IsGameOver = false; // Oyun durumunu sýfýrla
-
-        // Zamanlayýcýyý sýfýrla
-        startTime = Time.time;
+        startTime = Time.time; // Zamanlayýcýyý sýfýrla
     }
 }

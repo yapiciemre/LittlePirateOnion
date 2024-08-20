@@ -17,7 +17,7 @@ public class TargetSpawner : MonoBehaviour
     private float timer; // Geri sayým için kullanýlacak zamanlayýcý
 
     private int treasureCreated; // Þu ana kadar oluþturulan hedef sayýsý
-    private int treasureMilestone = 10; // Her milestone'da (10 hedef) bir kez cooldown'ý azaltmak için kullanýlan eþik deðeri
+    private int treasureMilestone = 15; // Her milestone'da (15 hedef) bir kez cooldown'ý azaltmak için kullanýlan eþik deðeri
 
     void Update()
     {
@@ -34,7 +34,7 @@ public class TargetSpawner : MonoBehaviour
             if (treasureCreated > treasureMilestone && cooldown > .5f)
             {
                 treasureMilestone += 10; // Milestone'u 10 artýr
-                cooldown -= .3f; // Soðuma süresini 0.3 saniye azalt
+                cooldown -= .15f; // Soðuma süresini 0.15 saniye azalt
             }
 
             // Yeni bir hedef nesnesi oluþtur
