@@ -17,9 +17,15 @@ public class UI : MonoBehaviour
 
     public bool IsGameOver { get; private set; } // Oyun bitmiþ mi?
 
+    // ChatIconController referansý
+    private ChatIconController chatIconController;
+
     private void Awake()
     {
         instance = this; // Bu sýnýfýn instance'ýný statik deðiþken olarak ayarla
+
+        // ChatIconController scriptini bul
+        chatIconController = FindObjectOfType<ChatIconController>();
     }
 
     void Start()
@@ -47,6 +53,12 @@ public class UI : MonoBehaviour
     {
         // Þu anki mermi sayýsýný ve maksimum mermi sayýsýný ammoText bileþenine yaz
         ammoText.text = currentBullets + " / " + maxBullets;
+
+        // Eðer mermi biterse ve ChatIcon daha önce gösterilmediyse
+        if (currentBullets == 0 && chatIconController != null)
+        {
+            chatIconController.ShowChatIcon();
+        }
     }
 
     public void OpenGameOverScreen()

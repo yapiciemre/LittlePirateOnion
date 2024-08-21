@@ -3328,7 +3328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1144580366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3777,6 +3777,7 @@ GameObject:
   - component: {fileID: 1405210042}
   - component: {fileID: 1405210041}
   - component: {fileID: 1405210045}
+  - component: {fileID: 1405210046}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3890,6 +3891,20 @@ MonoBehaviour:
   scoreText: {fileID: 320079186}
   ammoText: {fileID: 398492978}
   tryAgainButton: {fileID: 1763795625}
+--- !u!114 &1405210046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405210040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0e631947fef0744e9ef0b78123f4a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatIcon: {fileID: 1144580365}
+  displayDuration: 30
 --- !u!1 &1409773771
 GameObject:
   m_ObjectHideFlags: 0
