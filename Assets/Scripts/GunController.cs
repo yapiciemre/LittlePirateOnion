@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GunController : MonoBehaviour
 {
@@ -40,8 +41,8 @@ public class GunController : MonoBehaviour
             Shoot(direction);
 
         // Silahý doldurma
-        if (Input.GetKeyDown(KeyCode.R))
-            ReloadGun();
+        //if (Input.GetKeyDown(KeyCode.R))
+        //    ReloadGun();
 
         // Silahýn yönünü fare pozisyonuna göre döndür
         GunFlipController(mousePos);
@@ -64,8 +65,11 @@ public class GunController : MonoBehaviour
     }
 
     // Mermi ateþleme fonksiyonu
-    public void Shoot(Vector3 direction)
+    private void Shoot(Vector3 direction)
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         gunAnim.SetTrigger("Shoot"); // Ateþleme animasyonunu baþlat
         UI.instance.UpdateAmmoInfo(currentBullets, maxBullets); // UI'yi güncelle
 
@@ -78,14 +82,15 @@ public class GunController : MonoBehaviour
     }
 
     // Silahý doldurma fonksiyonu
-    private void ReloadGun()
+    public void ReloadGun()
     {
         currentBullets = maxBullets; // Mermileri yeniden doldur
         UI.instance.UpdateAmmoInfo(currentBullets, maxBullets); // UI'yi güncelle
+        Time.timeScale = 1;
     }
 
     // Mermi olup olmadýðýný kontrol et
-    public bool HaveBullets()
+    private bool HaveBullets()
     {
         if (currentBullets <= 0)
         {

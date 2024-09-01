@@ -20,6 +20,14 @@ public class UI : MonoBehaviour
     // ChatIconController referansý
     private ChatIconController chatIconController;
 
+
+    [Header("Reload Details")]
+    [SerializeField] private BoxCollider2D reloadWindow;
+    [SerializeField] private GunController gunController;
+    [SerializeField] private int reloadSteps;
+    [SerializeField] private UIReloadButton[] reloadButtons;
+
+
     private void Awake()
     {
         instance = this; // Bu sýnýfýn instance'ýný statik deðiþken olarak ayarla
@@ -32,6 +40,8 @@ public class UI : MonoBehaviour
     {
         // Oyunun baþladýðý zamaný ayarla
         startTime = Time.time;
+
+        reloadButtons = GetComponentsInChildren<UIReloadButton>(true);
     }
 
     void Update()
@@ -41,6 +51,36 @@ public class UI : MonoBehaviour
             float elapsedTime = Time.time - startTime; // Geçen süreyi hesapla
             timerText.text = elapsedTime.ToString("0"); // Zamaný gösterecek þekilde formatla
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            OpenReloadUI();
+        }
+    }
+
+    public void OpenReloadUI()
+    {
+        foreach (UIReloadButton button in reloadButtons)
+        {
+            button.gameObject.SetActive(true);
+
+            float randomX = Random.Range(reloadWindow.bounds.min.x, reloadWindow.bounds.max.x);
+            float randomY = Random.Range(reloadWindow.bounds.min.y, reloadWindow.bounds.max.y);
+
+            button.transform.position = new Vector2(randomX, randomY);
+        }
+
+        Time.timeScale = .4f;
+        reloadSteps = reloadButtons.Length;
+    }
+
+    public void AttemptToReload()
+    {
+        if (reloadSteps > 0)
+            reloadSteps--;
+
+        if (reloadSteps <= 0)
+            gunController.ReloadGun();
     }
 
     public void AddScore()
@@ -67,13 +107,13 @@ public class UI : MonoBehaviour
         tryAgainButton.SetActive(true); // "Tekrar Dene" butonunu ekranda aktif hale getir
         MusicManager.instance.StopMusic(); // Oyun bittiðinde müziði durdur
         IsGameOver = true; // Oyun bitmiþ olarak iþaretle
-        
+
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1; // Zaman ölçeðini sýfýrla, böylece oyun tekrar normal hýzda çalýþýr
-        SceneManager.LoadScene(0); // Sahneyi yeniden yükleyerek oyunu baþtan baþlat
+        SceneManager.LoadScene(1); // Sahneyi yeniden yükleyerek oyunu baþtan baþlat
         MusicManager.instance.RestartMusic(); // Oyun yeniden baþlatýldýðýnda müziði tekrar baþlat
         IsGameOver = false; // Oyun durumunu sýfýrla
         startTime = Time.time; // Zamanlayýcýyý sýfýrla
